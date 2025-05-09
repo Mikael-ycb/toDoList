@@ -18,13 +18,66 @@ if(isset($_POST["register"])){
     <head>
         <title>Halaman Registrasi</title>
         <style>
-            label{
-                display: block;
-            }
+        label{
+            display: block;
+            display: block;
+            margin-bottom: 5px;
+        }
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;  
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .registrasi-container {
+            background-color: #111;
+            border: 1px solid #00ff00;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 50px #00ff00;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00ff00;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #00ff00;
+            background-color: #000;
+            color: #00ff00;
+        }
+        input:focus {
+            outline: none;
+            border-color: #0f0;
+            box-shadow: 0 0 5px #0f0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
         </style>
     </head>
     <body>
-        
+        <div class="registrasi-container">
     <h1>Halaman Registrasi</h1>
 
     <form action="" method="post">
@@ -43,8 +96,12 @@ if(isset($_POST["register"])){
         <li>
             <button type="submit" name="register">Register!</button>
         </li>
+        <li>
+        <button type="button" onclick="window.location.href='login.php'" style="margin-top: 10px" >> Kembali ke login</button>
+        </li>
         </ul>
 
     </form>
+    </div>
     </body>
 </html>

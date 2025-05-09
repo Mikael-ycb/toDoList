@@ -36,7 +36,10 @@ if (isset($_POST["login"])) {
             font-family: 'Courier New', Courier, monospace;
         }
         body {
-            background-color: #000;
+            background-image: url('image1.webp');
+            background-size: cover;
+            background-position: center;  
+            background-repeat: no-repeat; 
             color: #00ff00;
             display: flex;
             justify-content: center;
@@ -84,6 +87,7 @@ if (isset($_POST["login"])) {
             cursor: pointer;
             font-weight: bold;
             transition: background 0.3s;
+
         }
         button:hover {
             background-color: #00ff00;
@@ -113,6 +117,11 @@ if (isset($_POST["login"])) {
             <input type="password" name="password" id="password">
 
             <button type="submit" name="login">> Enter</button>
+
+            
+
+            <button type="button" onclick="window.location.href='registrasi.php'" style="margin-top: 10px" >> Sign In</button>
+
         </form>
     </div>
 </body>

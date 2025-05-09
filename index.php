@@ -20,10 +20,14 @@ $todolist = query("SELECT * FROM todolist");
         * {
             box-sizing: border-box;
             font-family: 'Courier New', Courier, monospace;
+
         }
 
         body {
-            background-color: #000;
+            background-image: url('image4.jpg');
+            background-size: cover;
+            background-position: center;  
+            background-repeat: no-repeat;
             color: #00ff00;
             margin: 0;
             padding: 20px;
@@ -87,6 +91,12 @@ $todolist = query("SELECT * FROM todolist");
         .container {
             max-width: 800px;
             margin: 0 auto;
+            background-color: #111;
+            border: 1px solid #00ff00;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00;
+            
         }
 
     </style>
@@ -97,7 +107,6 @@ $todolist = query("SELECT * FROM todolist");
         <h1>To Do List</h1>
 
         <a href="tambah.php" class="button">+ Tambah To Do</a>
-
         <table>
             <tr>
                 <th>No.</th>
@@ -109,10 +118,22 @@ $todolist = query("SELECT * FROM todolist");
             <?php foreach ($todolist as $row): ?>
             <tr>
                 <td><?= $i; ?></td>
-                <td><?= $row["ToDoList"]; ?></td>
                 <td>
-                    <a href="" class="button">Selesai</a>
-                    <a href="hapus.php?id=<?= $row["id"]; ?>" class="button" onclick="return confirm('Yakin dihapus ini deck?')">Hapus</a>
+                    <?php if ($row["selesai"] == 1): ?>
+                    <span style="color: red;"><s><?= htmlspecialchars($row["ToDoList"]); ?></s></span>
+                    <?php else: ?>
+                    <?= htmlspecialchars($row["ToDoList"]); ?>
+                    <?php endif; ?>
+                </td>
+
+                <td>
+                    <?php if ($row["selesai"] == 1): ?>
+                    <button class="button" disabled style="color: red; border-color: red;">Selesai</button>
+                    <?php else: ?>
+                    <a href="selesai.php?id=<?= $row["id"]; ?>" class="button">Selesai</a>
+                    <?php endif; ?>
+
+                        <a href="hapus.php?id=<?= $row["id"]; ?>" class="button" onclick="return confirm('Yakin dihapus ini deck?')">Hapus</a>
                 </td>
             </tr>
             <?php $i++; ?>
