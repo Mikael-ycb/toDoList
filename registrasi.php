@@ -22,9 +22,8 @@ if(isset($_POST["register"])){
             display: block;
             display: block;
             margin-bottom: 5px;
+            color: #00ff00;
         }
-        * {
-            font-fam
         body {
             background-image: url('image.png');
             background-size: cover;

@@ -120,7 +120,7 @@ if (isset($_POST["login"])) {
 
             
 
-            <button type="button" onclick="window.location.href='registrasi.php'" style="margin-top: 10px" >> Sign In</button>
+            <button type="button" onclick="window.location.href='registrasi.php'" style="margin-top: 10px" >> Sign Up</button>
 
         </form>
     </div>
