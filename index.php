@@ -8,7 +8,21 @@ if(!isset($_SESSION["login"])){//jika tidak ada session login maka arahkan ke fo
 }
 
 require 'function.php';
-$todolist = query("SELECT * FROM todolist");
+
+//pagination
+
+//konfigurasi
+$jumlahDataPerHalaman = 2;
+$jumlahData = count(query("SELECT * FROM todolist"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+$awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+
+
+
+$todolist = query("SELECT *FROM todolist LIMIT $awalData, $jumlahDataPerHalaman");// tampilkan 2 data mulai dri index 0
+
 
 
 ?>
@@ -106,7 +120,27 @@ $todolist = query("SELECT * FROM todolist");
         <a href="logout.php" class="logout-link">Logout</a>
         <h1>To Do List</h1>
 
-        <a href="tambah.php" class="button">+ Tambah To Do</a>
+                <a href="tambah.php" class="button">+ Tambah To Do</a>
+        <br><br>
+
+        <!--navigasi-->
+    <?php if($halamanAktif>1): ?>
+        <a href="?halaman=<?= $halamanAktif - 1; ?>">&laquo;</a>
+    <?php endif;?>
+
+    <?php for($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+        <?php if($i == $halamanAktif):?>
+        <a href="?halaman= <?= $i;?>" style="font-weight: bold; color: red;"><?= $i; ?></a>
+        <?php else: ?>
+            <a href="?halaman=<?= $i; ?>"><?=$i;?></a>
+        <?php endif;?>
+    <?php endfor;?>
+
+    <?php if($halamanAktif < $jumlahHalaman): ?>
+        <a href="?halaman=<?= $halamanAktif + 1; ?>">&raquo;</a>
+    <?php endif;?>
+
+
         <table>
             <tr>
                 <th>No.</th>
