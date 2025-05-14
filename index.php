@@ -170,6 +170,7 @@ $todolist = query("SELECT *FROM todolist LIMIT $awalData, $jumlahDataPerHalaman"
                         <a href="hapus.php?id=<?= $row["id"]; ?>" class="button" onclick="return confirm('Yakin dihapus ini deck?')">Hapus</a>
                 </td>
             </tr>
+            
             <?php $i++; ?>
             <?php endforeach; ?>
         </table>
