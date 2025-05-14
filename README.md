@@ -22,8 +22,8 @@ ketika login berhasil maka akan ke halaman utama (kelas index)
 
 ## 5. Tambah to do List
 ketika tombol + tambah to do diklik maka akan pergi ke halaman toDoList seperti pada gambar dibawah
-![tambah](./toDoList(2).png)
+![tambah](./toDoList.png)
 
 ## 6. to do list ditambahkan
 ketika tombol tambah di klok, maka to do list baru ditambahkan ke dataset dan akan tampil di halaman utama seperti pada gambar dibawah. tetapi jika tombol kembali di klik maka akan kembali ke halaman utama tanpa menambahkan data.
-![tambah](./tDoList.png)
+![tambah](./tambahBaris.png)
