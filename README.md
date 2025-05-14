@@ -26,4 +26,20 @@ ketika tombol + tambah to do diklik maka akan pergi ke halaman toDoList seperti 
 
 ## 6. to do list ditambahkan
 ketika tombol tambah di klok, maka to do list baru ditambahkan ke dataset dan akan tampil di halaman utama seperti pada gambar dibawah. tetapi jika tombol kembali di klik maka akan kembali ke halaman utama tanpa menambahkan data.
-![tambah](./tambahBaris.png)
+![tambah baris](./tambahBaris.png)
+![tambah](./tambahToDoList.png)
+
+## 7. Selesai
+ketika tombol selesai ditambahkan maka data pada tabel halaman utama akan dicoret dan berwarna merah menandakan bahwa data tersebut sudah selesai dilaksanakan.
+![selessai](./selesai.png)
+
+## 8. hapus
+jika tombol hapus diklik maka data tersebut akan hilang dari halaman utama dan dataset.
+![hapus](./hapus.png)
+terlihat pada gambar diatas, pagination yang tadinya 4 sekarang sudah 3
+![hapus](./hapusBaris.png)
+terlihat pada gambar diataas, yang tadinya ada data mancing paling akhir, sekarang sudah tidak ada
+
+## 9. logout
+jika tombol logout pada halaman utama diklik maka halaman utama akan ditutup dan kembali ke halaman login. sebelum login, user tidak dapat masuk ke halaman lainnya
+![logout](logout.png)
