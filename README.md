@@ -33,7 +33,7 @@ ketika tombol + tambah to do diklik maka akan pergi ke halaman toDoList seperti 
 ![tambah](./toDoList.png)
 
 ## 8. to do list ditambahkan
-ketika tombol tambah di klok, maka to do list baru ditambahkan ke dataset dan akan tampil di halaman utama seperti pada gambar dibawah. tetapi jika tombol kembali di klik maka akan kembali ke halaman utama tanpa menambahkan data.
+ketika tombol tambah di klik, maka to do list baru ditambahkan ke dataset dan akan tampil di halaman utama seperti pada gambar dibawah. tetapi jika tombol kembali di klik maka akan kembali ke halaman utama tanpa menambahkan data.
 ![tambah baris](./tambahBaris.png)
 ![tambah](./tambahToDoList.png)
 
