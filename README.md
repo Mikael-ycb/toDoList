@@ -2,7 +2,7 @@
 
 ## 9. Password Salah
 
-(./image2.jpg)
+!(./evaluasi9.png)
 
 Pada gambar di atas, ditampilkan pesan kesalahan ketika user memasukkan password yang salah.  
 Hal ini membantu user memahami bahwa input yang diberikan salah dan perlu diperbaiki.
