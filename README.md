@@ -6,7 +6,7 @@ tabel toDoList memiliki atribut id sebagai primary key, ToDOList sebagai penyimp
 
 ## 2. tabel user
 tabel user memiliki atribut id sebagai primary key, username dan password.
-![user](tabelUser.png) 
+![user](tableUser.png) 
 
 ## 3. Login
 
