@@ -1,10 +1,9 @@
-# Evaluasi Heuristik Aplikasi ToDoList
+# ToDoList
 
-## 9. Password Salah
+## 1. Login
 
-![Password Salah](./image2.jpg)
+![Login](./login.png)
 
 
-Pada gambar di atas, ditampilkan pesan kesalahan ketika user memasukkan password yang salah.  
-Hal ini membantu user memahami bahwa input yang diberikan salah dan perlu diperbaiki.
+Pada gambar di atas, ditampilkan halaman login yang menampilkan username & password, tombol enter & sign-up
 
